@@ -1,0 +1,131 @@
+:root{
+    --bars-padding: 10px 15px;
+}
+
+.body-bg {
+    background-color: #D9DBD4;
+    height: 100vh;
+    position: relative;
+}
+
+.green-bar {
+    width: 100%;
+    top: 0;
+    position: absolute;
+    height: 200px;
+    background-color: #009688;
+}
+
+.app-layout {
+    position: relative;
+    padding-top: 80px;
+    height: 800px;
+    display: flex;
+}
+
+.contact-section {
+    background-color: white;
+    flex-basis: 30%;
+}
+
+.chat-section {
+    background-color: grey;
+    flex-grow: 1;
+}
+
+.account-bar {
+    padding: 10px;
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account-bar .avatar {
+    display: flex;
+    align-items: center;
+}
+
+.account-bar .avatar img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.account-bar .user-name {
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.account-bar-icons {
+    display: inline-block;
+    display: flex;
+    color: #B1B1B1;
+}
+
+.account-bar-icons i {
+    font-size: 1.2rem;
+    padding-right: 10px;
+}
+
+
+.notification-bar{
+    display: flex;
+    align-items: center;
+    padding:var(--bars-padding);
+    background-color: #8EDAFC;
+}
+.notification-bar i{
+    margin-right: 15px;
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    font-size: 1.3rem;
+    color: #8EDAFC;
+    border-radius: 50%;
+}
+
+.notification-link-apply a{
+    color: grey;
+}
+
+.search-conv-bar form{
+    align-items: center;
+}
+
+.search-conv-bar i{
+    color: grey;
+    padding-left: 15px;
+    display: block;
+}
+.search-conv-bar .form-control:focus{
+    border: none;
+    box-shadow: none;
+}
+.search-conv-bar .form-control{
+padding: var(--bars-padding);
+}
+
+
+.contact-item{
+    padding: var(--bars-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact-item img{
+    border-radius: 50%;
+    width: 70px;
+}
+
+.contact-avatar{
+    align-items: center;
+    display: flex;
+}
+.contact-avatar .last-msg{
+    color: grey;
+    font-size: 0.8rem;
+}
+
+.contact-last-msg-hour{
+    color: grey;
+}
