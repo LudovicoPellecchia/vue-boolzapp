@@ -127,5 +127,6 @@ padding: var(--bars-padding);
 }
 
 .contact-last-msg-hour{
+    font-size: 0.8rem;
     color: grey;
 }

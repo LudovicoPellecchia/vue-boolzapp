@@ -47,20 +47,20 @@
                         </form>
                     </nav>
                     <section class="contact-list-chat">
-                        <div class="contact-item">
+
+                        <div class="contact-item" v-for="Item in contatti" >
                             <div class="contact-avatar">
                                 <img src="./Immagini/avatar_1.jpg" alt="">
                                 <div class="contact-name">
                                     Michele
                                     <div class="last-msg">Ultimo messaggio inviato</div>
-
                                 </div>
                             </div>
-
                             <div class="contact-last-msg-hour">
                                 12:00
                             </div>
                         </div>
+
                     </section>
                 </div>
                 <div class="chat-section"></div>
