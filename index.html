@@ -48,11 +48,11 @@
                     </nav>
                     <section class="contact-list-chat">
 
-                        <div class="contact-item" v-for="Item in contatti" >
+                        <div class="contact-item" v-for="item in contatti" >
                             <div class="contact-avatar">
-                                <img src="./Immagini/avatar_1.jpg" alt="">
+                                <img v-bind:src="item.avatar" alt="">
                                 <div class="contact-name">
-                                    Michele
+                                    {{item.name}}
                                     <div class="last-msg">Ultimo messaggio inviato</div>
                                 </div>
                             </div>

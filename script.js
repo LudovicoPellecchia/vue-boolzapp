@@ -6,7 +6,7 @@ const app = createApp({
             contatti: [
                 {
                     name: "Michele",
-                    avatar: "avatar_1.jpg",
+                    avatar: "./Immagini/avatar_1.jpg",
                     messages: [
                         {
                             date: "10/01/2020 15:30:55",
@@ -27,7 +27,7 @@ const app = createApp({
                 },
                 {
                     name: "Fabio",
-                    avatar: "avatar_2",
+                    avatar: "./Immagini/avatar_2.jpg",
                     messages: [
                         {
                             date: "20/03/2020 16:30:00",
@@ -48,7 +48,7 @@ const app = createApp({
                 },
                 {
                     name: "Samuele",
-                    avatar: "avatar_3",
+                    avatar: "./Immagini/avatar_3.jpg",
                     messages: [
                         {
                             date: "28/03/2020 10:10:40",
@@ -69,7 +69,7 @@ const app = createApp({
                 },
                 {
                     name: "Luisa",
-                    avatar: "avatar_4",
+                    avatar: "./Immagini/avatar_4.jpg",
                     messages: [
                         {
                             date: "10/01/2020 15:30:55",
