@@ -85,6 +85,7 @@ const app = createApp({
                 },
 
             ],
+            
             currentItem : null
 
         }

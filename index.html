@@ -49,7 +49,9 @@
                     </nav>
                     <section class="contact-list-chat">
 
-                        <div class="contact-item" v-for="item in contatti" @click="onItemClick(item)">
+                        <div class="contact-item" 
+                        v-for="item in contatti" 
+                        @click="onItemClick(item)">
                             <div class="contact-avatar">
                                 <img v-bind:src="item.avatar" alt="">
                                 <div class="contact-name">
