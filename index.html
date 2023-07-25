@@ -19,7 +19,7 @@
         <div class="body-bg">
             <div class="green-bar"></div>
             <div class="container app-layout">
-                <div class="contact-section">
+                <div class="contact-section overflow-auto">
                     <div class="account-bar">
                         <div class="avatar">
                             <img src="Immagini/avatar_io.jpg" alt="">
@@ -43,12 +43,13 @@
                     <nav class="search-conv-bar">
                         <form class="d-flex" role="search">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <input class="form-control border-0" type="search" placeholder="Cerca o inizia una nuova chat">
+                            <input class="form-control border-0" type="search"
+                                placeholder="Cerca o inizia una nuova chat">
                         </form>
                     </nav>
                     <section class="contact-list-chat">
 
-                        <div class="contact-item" v-for="item in contatti" >
+                        <div class="contact-item" v-for="item in contatti" @click="onItemClick(item)">
                             <div class="contact-avatar">
                                 <img v-bind:src="item.avatar" alt="">
                                 <div class="contact-name">
@@ -63,7 +64,45 @@
 
                     </section>
                 </div>
-                <div class="chat-section"></div>
+
+                <div class="chat-section">
+                    <div class="account-bar">
+                        <div class="avatar">
+                            <img src="Immagini/avatar_io.jpg" alt="">
+                            <div class="user-name"></div>
+                        </div>
+                        <div class="account-bar-icons">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+
+                    <div class="chat-messages">
+                        <div class="msg-wrapper">
+                            <div class="single-msg sent">
+                                Messaggio inviato
+                            </div>
+                        </div>
+
+                        <div class="msg-wrapper">
+                            <div class="single-msg received">
+                                Messaggio ricevuto
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="chat-input-bar">
+                        <div> <i class="fas fa-smile"></i>
+                        </div>
+                        <input type="text" class="form-control border-0" placeholder="Scrivi un messaggio">
+                        <div> <i class="fas fa-microphone"></i>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
 

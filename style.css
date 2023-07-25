@@ -6,6 +6,8 @@
     background-color: #D9DBD4;
     height: 100vh;
     position: relative;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .green-bar {
@@ -18,8 +20,7 @@
 
 .app-layout {
     position: relative;
-    padding-top: 80px;
-    height: 800px;
+    height: 100%;
     display: flex;
 }
 
@@ -31,6 +32,8 @@
 .chat-section {
     background-color: grey;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .account-bar {
@@ -74,11 +77,15 @@
     padding:var(--bars-padding);
     background-color: #8EDAFC;
 }
+
 .notification-bar i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
     margin-right: 15px;
-    display: inline-block;
     background-color: white;
-    padding: 10px;
+    width: 40px;
     font-size: 1.3rem;
     color: #8EDAFC;
     border-radius: 50%;
@@ -129,4 +136,52 @@ padding: var(--bars-padding);
 .contact-last-msg-hour{
     font-size: 0.8rem;
     color: grey;
+}
+
+.chat-messages{
+    padding: 20px;
+    flex-grow: 1;
+    background-image: url(./Immagini/mine.jpg);
+}
+
+
+.chat-input-bar{
+    justify-content: space-between;
+    padding: .8rem 1.2rem;
+    display: flex;
+    align-items: center;
+    background-color: #F3EEEA;
+}
+
+.chat-input-bar input{
+    margin-right: 10px;
+    padding: 10px;
+}
+.chat-input-bar .form-control:focus{
+    border: none;
+    box-shadow: none;
+}
+
+.chat-input-bar i{
+    padding-right: 10px;
+    font-size: 1.3rem;
+    color:#c7c1bc ;
+}
+
+.msg-wrapper{
+    display: flex;
+    padding: 5px 0;
+}
+.single-msg{
+    min-width: 200px;
+    display: inline-block;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    background-color: white;
+}
+
+.single-msg.sent{
+    margin-left: auto;
+    background-color:#D5F9BA ;
+
 }

@@ -83,11 +83,17 @@ const app = createApp({
                         },
                     ],
                 },
-            ]
+
+            ],
+            currentItem : null
+
         }
     },
 
     methods: {
+        onItemClick(singleItem){
+            this.currentItem = singleItem
+        }
 
     }
 
