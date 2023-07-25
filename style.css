@@ -180,8 +180,7 @@ padding: var(--bars-padding);
     background-color: white;
 }
 
-.single-msg.sent{
+.sent{
     margin-left: auto;
     background-color:#D5F9BA ;
-
 }
