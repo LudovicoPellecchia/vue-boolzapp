@@ -69,9 +69,9 @@
 
                 <div class="chat-section">
                     <div class="account-bar">
-                        <div class="avatar">
-                            <img src="Immagini/avatar_io.jpg" alt="">
-                            <div class="user-name"></div>
+                        <div class="avatar" v-if="currentItem">
+                            <img :src="currentItem.avatar" alt="">
+                            <div class="user-name">{{currentItem.name}} <br> <small style="font-weight: 100;">Ultimo messaggio alle 12:00</small></div>
                         </div>
                         <div class="account-bar-icons">
                             <i class="fa-solid fa-circle-notch"></i>
@@ -81,15 +81,15 @@
                     </div>
 
                     <div class="chat-messages">
-                        <div class="msg-wrapper">
-                            <div class="single-msg sent">
-                                Messaggio inviato
+                        <div class="msg-wrapper" v-if="currentItem" v-for="message in currentItem" >
+                            <div class="single-msg sent" v-if="currentItem.messages.status === 'sent'" >
+                                {{currentItem.messages.message}}
                             </div>
                         </div>
 
-                        <div class="msg-wrapper">
-                            <div class="single-msg received">
-                                Messaggio ricevuto
+                        <div class="msg-wrapper"v-if="currentItem" v-for="message in currentItem"  >
+                            <div class="single-msg received" v-if="currentItem.messages.status === 'received'">
+                                {{currentItem.messages.message}}
                             </div>
                         </div>
 

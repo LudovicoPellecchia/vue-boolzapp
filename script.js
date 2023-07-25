@@ -85,17 +85,16 @@ const app = createApp({
                 },
 
             ],
-            
-            currentItem : null
+
+            currentItem: null
 
         }
     },
 
     methods: {
-        onItemClick(singleItem){
+        onItemClick(singleItem) {
             this.currentItem = singleItem
-        }
-
+        },
     }
 
 }).mount("#app")
