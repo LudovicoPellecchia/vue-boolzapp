@@ -83,8 +83,8 @@
                     <!-- STAMPA DEI MESSAGGI IN CHAT -->
                     <div class="chat-messages">
                         <div class="msg-wrapper" v-if="currentItem"  v-for="message in currentItem.messages" >
-                            <div class="single-msg"  v-bind:class='(currentItem.messages.status === "sent" ? "sent" : "received")' >
-                                {{message}}
+                            <div class="single-msg"  v-bind:class='(message.status === "sent" ? "sent" : "received")' >
+                                {{message.message}}
                             </div>
                         </div>
                     </div>
