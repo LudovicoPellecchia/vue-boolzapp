@@ -95,7 +95,7 @@
                         <input type="text" 
                         class="form-control border-0" placeholder="Scrivi un messaggio"
                         v-model="newTextMsg"
-                        @keyup.enter="newMessage()">
+                        @keyup.enter="newMessage(), emptyInput(), answerMsg()">
                         <div> <i class="fas fa-microphone"></i>
                         </div>
                     </div>
