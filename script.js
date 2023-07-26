@@ -86,7 +86,7 @@ const app = createApp({
 
             ],
 
-            
+            newTextMsg:"",
 
             currentItem: null
 
@@ -97,7 +97,20 @@ const app = createApp({
         onItemClick(singleItem) {
             this.currentItem = singleItem
         },
+        
+        newMessage(){
+            this.currentItem.messages.push({
+                date: "20/03/2020 16:35:00",
+                message: this.newTextMsg,
+                status: "sent"
+
+            }
+            );   
+            return this.currentItem
+ 
+        }
     }
+
 
 }).mount("#app")
 
