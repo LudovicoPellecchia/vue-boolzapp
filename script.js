@@ -86,9 +86,13 @@ const app = createApp({
 
             ],
 
+            filterConv:"",
+
             newTextMsg: "",
 
-            currentItem: null
+            currentItem: null,
+
+            contactNames :[]
 
         }
     },
@@ -100,7 +104,7 @@ const app = createApp({
 
         newMessage() {
             this.currentItem.messages.push({
-                date: "20/03/2020 16:35:00",
+                date:"",
                 message: this.newTextMsg,
                 status: "sent"
             }
@@ -114,11 +118,18 @@ const app = createApp({
         answerMsg(){
             setTimeout(() => {
                 this.currentItem.messages.push({
-                    date: "20/03/2020 16:35:00",
+                    date: "",
                     message: "Sono d'accordo",
                     status: "received"
                 })
             }, 1000)
+        },
+
+        filterContacts() {
+            if (this.filterConv.trim().length > 0){
+                return this.contatti.filter((item) => item.name.toLowerCase().includes(this.filterConv.trim()))
+            }
+            return this.contatti
         }
 
     }

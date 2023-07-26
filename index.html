@@ -31,6 +31,7 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
+
                     <div class="notification-bar">
                         <div class="notification-bell">
                             <i class="fa-solid fa-bell-slash"></i>
@@ -40,18 +41,22 @@
                             <div class="notification-link-apply"><a href="#">Attiva notifiche desktop</a></div>
                         </div>
                     </div>
+
                     <nav class="search-conv-bar">
-                        <form class="d-flex" role="search">
+                        <form class="d-flex" role="search" >
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <input class="form-control border-0" type="search"
-                                placeholder="Cerca o inizia una nuova chat">
+                                placeholder="Cerca o inizia una nuova chat" 
+                                v-model="filterConv"
+                                >
                         </form>
                     </nav>
-                    <section class="contact-list-chat">
 
+                    <section class="contact-list-chat" >
                         <div class="contact-item" 
-                        v-for="item in contatti" 
-                        @click="onItemClick(item)">
+                        v-for="(item) in filterContacts()" 
+                        @click="onItemClick(item)"
+                        >
                             <div class="contact-avatar">
                                 <img v-bind:src="item.avatar" alt="">
                                 <div class="contact-name">
@@ -63,7 +68,6 @@
                                 12:00
                             </div>
                         </div>
-
                     </section>
                 </div>
 
