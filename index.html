@@ -16,10 +16,15 @@
 
 <body>
     <div id="app">
+
         <div class="body-bg">
             <div class="green-bar"></div>
+
             <div class="container app-layout">
+                <!-- Divido il layout in due macrosezioni:PRIMA SEZIONE-->
                 <div class="contact-section overflow-auto">
+                    
+                    <!-- NAVBAR ACCOUNT-USER -->
                     <div class="account-bar">
                         <div class="avatar">
                             <img src="Immagini/avatar_io.jpg" alt="">
@@ -32,6 +37,7 @@
                         </div>
                     </div>
 
+                    <!-- AVVISO ATTIVA NOTIFICHE -->
                     <div class="notification-bar">
                         <div class="notification-bell">
                             <i class="fa-solid fa-bell-slash"></i>
@@ -42,6 +48,7 @@
                         </div>
                     </div>
 
+                    <!-- BARRA DI RICERCA PER FILTRARE I CONTATTI -->
                     <nav class="search-conv-bar">
                         <form class="d-flex" role="search" >
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -52,11 +59,11 @@
                         </form>
                     </nav>
 
+                    <!-- LISTA DEI CONTATTI -->
                     <section class="contact-list-chat" >
                         <div class="contact-item" 
                         v-for="(item) in filterContacts()" 
-                        @click="onItemClick(item)"
-                        >
+                        @click="onItemClick(item)"> <!-- evento Click per recuperare la chat del singolo contatto -->
                             <div class="contact-avatar">
                                 <img v-bind:src="item.avatar" alt="">
                                 <div class="contact-name">
@@ -71,9 +78,10 @@
                     </section>
                 </div>
 
+                <!-- SECONDA SEZIONE -->
                 <div class="chat-section">
                     <div class="account-bar">
-                        <div class="avatar" v-if="currentItem">
+                        <div class="avatar" v-if="currentItem"> <!-- mostra l'avatar solo se è stato clickato il contatto -->
                             <img :src="currentItem.avatar" alt="">
                             <div class="user-name">{{currentItem.name}} <br> <small style="font-weight: 100;">Ultimo messaggio alle 12:00</small></div>
                         </div>
@@ -86,13 +94,13 @@
 
                     <!-- STAMPA DEI MESSAGGI IN CHAT -->
                     <div class="chat-messages">
-                        <div class="msg-wrapper" v-if="currentItem"  v-for="message in currentItem.messages" >
+                        <div class="msg-wrapper" v-if="currentItem"  v-for="message in currentItem.messages" > <!-- mostra i messaggi del contatto solo se clickati -->
                             <div class="single-msg"  v-bind:class='(message.status === "sent" ? "sent" : "received")' >
                                 {{message.message}}
                             </div>
                         </div>
                     </div>
-
+                    <!-- BARRA INPUT PER INVIARE MESSAGGIO -->
                     <div class="chat-input-bar">
                         <div> <i class="fas fa-smile"></i>
                         </div>

@@ -102,7 +102,7 @@ const app = createApp({
             this.currentItem = singleItem
         },
 
-        newMessage() {
+        newMessage() {     /* funzione che pusha dentro l'array del contatto selezionato i valori dell'input scritti dall'utente */
             this.currentItem.messages.push({
                 date:"",
                 message: this.newTextMsg,
@@ -111,11 +111,11 @@ const app = createApp({
             );
         },
 
-        emptyInput() {
+        emptyInput() {     /* funzione che svuota la barra input dopo aver inviato il messaggio  */
             this.newTextMsg = ""
         },
 
-        answerMsg(){
+        answerMsg(){    /* funzione che imposta un timer di 1 secondo per avere una risposta automatica ai messaggi dell'utente */
             setTimeout(() => {
                 this.currentItem.messages.push({
                     date: "",
@@ -125,9 +125,9 @@ const app = createApp({
             }, 1000)
         },
 
-        filterContacts() {
-            const filterText = this.filterConv.trim().toLowerCase();
-            
+        filterContacts() { /* funzione che filtra la lista dei contatti */
+            const filterText = this.filterConv.trim().toLowerCase(); 
+
             if (this.filterConv.trim().length > 0){
                 return this.contatti.filter((item) => item.name.toLowerCase().includes(this.filterConv.trim()) && item.name.toLowerCase().startsWith(filterText))
             }
