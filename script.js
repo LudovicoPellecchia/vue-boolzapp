@@ -126,8 +126,10 @@ const app = createApp({
         },
 
         filterContacts() {
+            const filterText = this.filterConv.trim().toLowerCase();
+            
             if (this.filterConv.trim().length > 0){
-                return this.contatti.filter((item) => item.name.toLowerCase().includes(this.filterConv.trim()))
+                return this.contatti.filter((item) => item.name.toLowerCase().includes(this.filterConv.trim()) && item.name.toLowerCase().startsWith(filterText))
             }
             return this.contatti
         }
