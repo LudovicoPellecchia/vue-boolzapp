@@ -128,6 +128,11 @@ padding: var(--bars-padding);
     align-items: center;
     display: flex;
 }
+
+.contact-name{
+    padding-left: 10px;
+}
+
 .contact-avatar .last-msg{
     color: grey;
     font-size: 0.8rem;
