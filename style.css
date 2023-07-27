@@ -130,7 +130,7 @@ padding: var(--bars-padding);
 }
 
 .contact-name{
-    padding-left: 10px;
+    padding-left: 8px;
 }
 
 .contact-avatar .last-msg{
@@ -144,6 +144,7 @@ padding: var(--bars-padding);
 }
 
 .chat-messages{
+    overflow: auto;
     padding: 20px;
     flex-grow: 1;
     background-image: url(./Immagini/mine.jpg);
