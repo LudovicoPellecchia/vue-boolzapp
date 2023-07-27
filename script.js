@@ -86,11 +86,11 @@ const app = createApp({
 
             ],
 
-            filterConv:"",
+            filterConv:"", //recupera l'input della barra di ricerca delle conversazioni
 
-            newTextMsg: "",
+            newTextMsg: "", //recupera l'input della barra di invio messaggi in chat
 
-            currentItem: null,
+            currentItem: null, //recupera i singoli componenti dell'array "contatti" quando vengono clickati secondo la funzione onItemClick
 
         }
     },
