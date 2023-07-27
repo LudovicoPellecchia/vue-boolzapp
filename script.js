@@ -92,8 +92,6 @@ const app = createApp({
 
             currentItem: null,
 
-            contactNames :[]
-
         }
     },
 
@@ -128,8 +126,8 @@ const app = createApp({
         filterContacts() { /* funzione che filtra la lista dei contatti */
             const filterText = this.filterConv.trim().toLowerCase(); 
 
-            if (this.filterConv.trim().length > 0){
-                return this.contatti.filter((item) => item.name.toLowerCase().includes(this.filterConv.trim()) && item.name.toLowerCase().startsWith(filterText))
+            if (filterText.length > 0){
+                return this.contatti.filter((item) => item.name.toLowerCase().includes(filterText) && item.name.toLowerCase().startsWith(filterText))
             }
             return this.contatti
         }
