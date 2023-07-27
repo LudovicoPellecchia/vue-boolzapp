@@ -60,7 +60,7 @@
                     </nav>
 
                     <!-- LISTA DEI CONTATTI -->
-                    <section class="contact-list-chat" >
+                    <section class="contact-list-chat overflow-auto" >
                         <div class="contact-item" 
                         v-for="(item) in filterContacts()" 
                         @click="onItemClick(item)"> <!-- evento Click per recuperare la chat del singolo contatto -->

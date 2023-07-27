@@ -83,6 +83,86 @@ const app = createApp({
                         },
                     ],
                 },
+                {
+                    name: "Federico",
+                    avatar: "./Immagini/avatar_4.jpg",
+                    messages: [
+                        {
+                            date: "10/01/2020 15:30:55",
+                            message: "Lo sai che ha aperto una nuova pizzeria?",
+                            status: "sent",
+                        },
+                        {
+                            date: "10/01/2020 15:50:00",
+                            message: "Si, ma preferirei andare al cinema",
+                            status: "received",
+                        },
+                    ],
+                },
+                {
+                    name: "Giovanni",
+                    avatar: "./Immagini/avatar_3.jpg",
+                    messages: [
+                        {
+                            date: "10/01/2020 15:30:55",
+                            message: "Lo sai che ha aperto una nuova pizzeria?",
+                            status: "sent",
+                        },
+                        {
+                            date: "10/01/2020 15:50:00",
+                            message: "Si, ma preferirei andare al cinema",
+                            status: "received",
+                        },
+                    ],
+                },
+                {
+                    name: "Laura",
+                    avatar: "./Immagini/avatar_4.jpg",
+                    messages: [
+                        {
+                            date: "10/01/2020 15:30:55",
+                            message: "Lo sai che ha aperto una nuova pizzeria?",
+                            status: "sent",
+                        },
+                        {
+                            date: "10/01/2020 15:50:00",
+                            message: "Si, ma preferirei andare al cinema",
+                            status: "received",
+                        },
+                    ],
+                },
+                {
+                    name: "Giuseppe",
+                    avatar: "./Immagini/avatar_1.jpg",
+                    messages: [
+                        {
+                            date: "10/01/2020 15:30:55",
+                            message: "Lo sai che ha aperto una nuova pizzeria?",
+                            status: "sent",
+                        },
+                        {
+                            date: "10/01/2020 15:50:00",
+                            message: "Si, ma preferirei andare al cinema",
+                            status: "received",
+                        },
+                    ],
+                },
+                {
+                    name: "Marco",
+                    avatar: "./Immagini/avatar_2.jpg",
+                    messages: [
+                        {
+                            date: "10/01/2020 15:30:55",
+                            message: "Lo sai che ha aperto una nuova pizzeria?",
+                            status: "sent",
+                        },
+                        {
+                            date: "10/01/2020 15:50:00",
+                            message: "Si, ma preferirei andare al cinema",
+                            status: "received",
+                        },
+                    ],
+                },
 
             ],
 

@@ -25,6 +25,8 @@
 }
 
 .contact-section {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     flex-basis: 30%;
 }
